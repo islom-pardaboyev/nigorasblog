@@ -26,7 +26,7 @@ function ImageSlot({ id, src, placed, status, correctName, showResults }) {
     : "ring-gray-200";
   return (
     <div className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-      <img src={src} alt="" className="w-full h-32 object-cover" loading="lazy" />
+      <img src={src} alt={correctName} className="w-full h-32 object-cover" loading="lazy" />
       <div ref={setNodeRef}
         className={`min-h-[52px] m-2 rounded-lg ring-2 flex items-center justify-center px-2 text-sm font-medium ${ring}`}>
         {placed ? <span>{placed}</span> : <span className="text-gray-400 text-xs">Nomni torting</span>}

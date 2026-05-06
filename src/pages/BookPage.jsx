@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { books } from "../data/books.js";
 import TaskRenderer from "../components/TaskRenderer.jsx";
@@ -7,6 +7,10 @@ export default function BookPage() {
   const { id } = useParams();
   const book = books.find((b) => String(b.id) === String(id));
   const [scores, setScores] = useState({});
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [id]);
 
   if (!book) {
     return (
