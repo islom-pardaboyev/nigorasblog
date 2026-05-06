@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #ffffff; color: #1a1a1a; }
+body { font-family: "DM Sans", system-ui, sans-serif; }
+h1, h2, h3, h4 { font-family: "DM Serif Display", serif; letter-spacing: -0.01em; }
+
+.article-prose p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
