@@ -29,7 +29,7 @@ function ImageSlot({ id, src, placed, status, correctName, showResults }) {
       <img src={src} alt={correctName} className="w-full h-32 object-cover" loading="lazy" />
       <div ref={setNodeRef}
         className={`min-h-[52px] m-2 rounded-lg ring-2 flex items-center justify-center px-2 text-sm font-medium ${ring}`}>
-        {placed ? <span>{placed}</span> : <span className="text-gray-400 text-xs">Nomni torting</span>}
+        {placed ? <span>{placed}</span> : <span className="text-gray-400 text-xs">Nomini torting</span>}
       </div>
       {showResults && status === "wrong" && (
         <p className="text-xs text-success px-3 pb-2">To'g'ri javob: {correctName}</p>

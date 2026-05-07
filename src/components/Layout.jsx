@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       <main className="flex-1">{children}</main>
       <footer className="border-t border-gray-200 bg-cream mt-16">
         <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-          © 2025 Adabiyot Dunyosi | Tayyorladi: Nigora
+          © {new Date().getFullYear()} Adabiyot Dunyosi | Tayyorladi: Nigora
         </div>
       </footer>
     </div>

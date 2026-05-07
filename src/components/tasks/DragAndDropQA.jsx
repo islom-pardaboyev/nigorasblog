@@ -8,7 +8,7 @@ function AnswerChip({ id, label, used }) {
   const style = transform ? { transform: `translate3d(${transform.x}px, ${transform.y}px, 0)` } : undefined;
   return (
     <div ref={setNodeRef} style={style} {...listeners} {...attributes}
-      className={`select-none px-4 py-2.5 rounded-xl border text-sm font-medium transition-all ${
+      className={`select-none px-4 py-2.5 rounded-xl border text-sm font-medium transition-colors ${
         used ? "opacity-30 cursor-default bg-gray-100 border-gray-200"
              : "bg-accent/10 border-accent/40 cursor-grab active:cursor-grabbing hover:bg-accent/20"
       } ${isDragging ? "z-50 shadow-lg" : ""}`}>

@@ -1,7 +1,7 @@
 export const books = [
   {
     id: 1,
-    novel_name: "Aring qasosi (I qism)",
+    novel_name: "Arining qasosi (I qism)",
     author: "Muhabbat Hamidova",
     genre: "Hikoya",
     short_description:
