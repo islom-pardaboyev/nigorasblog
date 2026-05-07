@@ -209,4 +209,140 @@ O'tkir tutlarning panasiga o'tdi. Uch-to'rtta ari shundoq tepalaridan uchib o'td
       },
     ],
   },
+  {
+    id: 2,
+    novel_name: "Qushlar qanday inlarda yashaydilar",
+    author: "Bolalar ensiklopediyasi ertaklarda",
+    genre: "Ertak",
+    short_description:
+      "Baliqchi qush boshqa qushlarning inlarini ko'rib, o'ziga mos in qidiradi...",
+    text: `Qadim zamonda bir baliqchi qush bo'lgan ekan. Uning qo'yib, bolalaydigan payti yaqinlashibdi. Baliqchi qush: "Qanday in qursam ekan?" deb o'ylanib qolibdi. O'ylab-o'ylab, oldin boshqa qushlarning qanday in qurishlarini bilib olishga qaror qilibdi.
+- Yur, senga o'z inimni ko'rsataman, deb Qarg'a uni iniga taklif qilibdi. - Bu yerda bolalarim uchun keng joy qilib qo'yganman, - debdi u.
+Baliqchi qushga Qarg'aning ini sira yoqmabdi. Bir uyum katta-kichik shox-shabbalar har tarafga sochilib yotgan emish.
+Shunda u boshqa inni ko'rgani ketibdi. Uchib borib chumchuqning iniga qo'nibdi. Chumchuq o'zi uchun dumaloq shakldagi, tepasida teshigi bor in qurgan ekan.
+- Yaxshi, qulaygina uy ekan, lekin buning tashvishi-chi? Men bunday uy qurguncha charchab qolaman-ku, axir? deb o'ylabdi o'zicha Baliqchi qush.
+- Shu ham ish bo'ldimi? - debdi yovvoyi tovuqlar birvarakayiga. Biz bo'lajak jo'jalarimiz uchun qanday in qurganimizni bir qaragin-a! Oldin yerdan yarim metr chuqurlikda o'ra kovlab, keyin uch oy davomida tepalik quramiz, - deyishibdi ular.
+- Men esa o'zimga loydan in quraman, - debdi qaldirg'och.
+- Men esa qirg'oq bo'ylarida chuqurcha qaziyman, - debdi qirg'oq qaldirg'ochi.
+- Buncha harakatning nima keragi bor? - deb ajablandi Boyqush. - Masalan, men qizilishton daraxtda qoldirgan eski teshikni topib olib, shuning ichida tinchgina yashayveraman.
+- Men ham o'zimni qiynab o'tirmayman, - debdi Kakku. - In qurishning nima keragi bor o'zi? Tuxumlarimni begona qushlar iniga tashlayman-u, ketaveraman. Boshqa qushlar bolalarimni boqib katta qilishsin.
+- Yo'q, men bunday qilolmayman, - deya e'tiroz bildiribdi Baliqchi qush. Mening tuxumlarimni begona joylarga tashlab ketish niyatim yo'q.
+Baliqchi qush uchib yurib, inlarni birma-bir tomosha qilib chiqquncha, uning tuxum qo'yadigan payti ham kelib qolibdi. Shunda u tuxumlarini o'zi yashaydigan qirg'oq bo'yidagi yerga qo'yibdi va shu yerda jo'jalarini parvarishlab o'stiribdi.`,
+
+    tasks: [
+      {
+        id: 1,
+        type: "oral_questions",
+        title: "1-topshiriq: Og'zaki savollar",
+        questions: [
+          "Nima sababdan Baliqchi qush boshqa qushlarning inlarini ko‘rib chiqsa ham, ularni takrorlamadi? Bu uning qaror qabul qilish jarayoni haqida nimani ko‘rsatadi?",
+          "Turli qushlarning in qurish usullarini taqqoslang. Qaysi biri eng samarali deb o‘ylaysiz va nima uchun? ",
+          "Kakku qushining tuxumlarini boshqa qushlar iniga tashlab ketishi sizningcha aqlli yo‘lmi yoki mas’uliyatsizlikmi? Sabablar bilan tushuntiring.",
+          "Hikoyadagi qaysi qush dangasalikni, qaysi biri mehnatsevarlikni ifodalaydi?",
+          "Hikoyaning asosiy g‘oyasi (xulosasi) nima? Uni real hayot bilan qanday bog‘lash mumkin? ",
+        ],
+      },
+      {
+        id: 2,
+        type: "drag_and_drop_qa",
+        title: "2-topshiriq",
+        instruction: "Har bir savolga mos javob kartochkasini torting",
+        pairs: [
+          {
+            question: "Baliqchi qush nimani bilib olishni istadi?",
+            answer: "In qurish",
+          },
+          {
+            question: "Qarg‘a inini qanday qilib ta’rifladi?",
+            answer: "keng",
+          },
+          {
+            question: "Baliqchi qushga qarg‘aning ini nega yoqmadi?",
+            answer: "tartibsiz",
+          },
+          {
+            question: "Chumchuq inining yuqori qismida nima bor edi?",
+            answer: "teshik",
+          },
+          {
+            question: "Baliqchi qush chumchuqning inini qanday baholadi?",
+            answer: "qulay",
+          },
+          {
+            question: "Yovvoyi tovuqlar avval nima qiladi?",
+            answer: "o‘ra kovlaydi",
+          },
+          {
+            question: "Yovvoyi tovuqlar o‘ra kovlagandan keyin nima qiladi?",
+            answer: "tepalik quradi",
+          },
+          {
+            question: "Qaldirg‘och o‘z inini nimadan qurishini aytdi?",
+            answer: "loy",
+          },
+          {
+            question: "Qirg‘oq qaldirg‘ochi inini qayerda quradi?",
+            answer: "qirg‘oqda",
+          },
+          {
+            question: "Boyqush qanday joydan foydalanadi?",
+            answer: "eski teshik",
+          },
+          {
+            question: "Kakku tuxumlarini qayerga tashlaydi?",
+            answer: "begona qushlar iniga",
+          },
+          {
+            question: "Boyqush qaysi qush qoldirgan teshikdan foydalandi?",
+            answer: "qizilishton",
+          },
+          {
+            question: "Baliqchi qush tuxumlarini oxir-oqibat qayerga qo'yadi?",
+            answer: "qirg‘oq bo‘yidagi yer",
+          },
+          {
+            question: "Baliqchi qush jo‘jalarini qayerda o‘stirdi?",
+            answer: "qirg‘oqda",
+          },
+        ],
+      },
+      {
+        id: 3,
+        type: "ordering",
+        title: "3-topshiriq",
+        instruction: "Baliqchi qush ko'rishgan qushlar ketma-ketligini toping",
+        correct_order: [
+          "Qarg'a",
+          "Chumchuq",
+          "Yovvoyi tovuqlar",
+          "Qaldirg'och",
+          "Qirg'oq qaldirg'ochi",
+          "Boyqush",
+          "Kakku",
+        ],
+      },
+      {
+        id: 4,
+        type: "image_matching",
+        title: "4-topshiriq",
+        instruction: "Matnda berilgan ta'rifga mos qush inini toping",
+        items: [
+          { id: 1, name: "Kakku", image: null },
+          { id: 2, name: "Qarg'a", image: "B" },
+          { id: 3, name: "Qaldirg'och", image: "D" },
+          { id: 4, name: "Boyqush", image: "E" },
+          { id: 5, name: "Chumchuq", image: "A" },
+          { id: 6, name: "Yovvoyi tovuqlar", image: null },
+          { id: 7, name: "Qirg'oq qaldirg'ochi", image: null },
+        ],
+        images: [
+          { label: "A", description: "Dumaloq o'tdan yasalgan in" },
+          { label: "B", description: "Daraxt tepasidagi katta in" },
+          { label: "D", description: "Devorga suvalgan loy inlar" },
+          { label: "E", description: "Daraxt teshigi" },
+        ],
+        previewImage: '/Picture1.jpg'
+      },
+    ],
+  },
 ];
