@@ -75,29 +75,34 @@ export default function OralQuestions({ questions }) {
   function spin() {
     if (spinning || !remaining.length) return;
     setSpinning(true);
+
     const n = remaining.length;
     const slice = (Math.PI * 2) / n;
     const pi = Math.floor(Math.random() * n);
     const picked = remaining[pi];
+
     const sliceCenter = pi * slice + slice / 2;
-    const extra = Math.PI * 2 * (6 + Math.floor(Math.random() * 4));
-    const target = -Math.PI / 2 - sliceCenter + extra;
-    const dur = 3600;
-    const sa = angleRef.current;
-    const total = target - sa;
+    const ROTATIONS = 8;
+    const target = ROTATIONS * Math.PI * 2 + (-Math.PI / 2 - sliceCenter);
+
+    const dur = 3000;
+    const total = target;
     const st = performance.now();
     const snap = [...remaining];
     const ctx = canvasRef.current.getContext("2d");
 
+    angleRef.current = 0;
+
     function step(now) {
       const t = Math.min((now - st) / dur, 1);
       const ease = 1 - Math.pow(1 - t, 4);
-      angleRef.current = sa + total * ease;
+      angleRef.current = total * ease;
       drawWheel(ctx, angleRef.current, snap);
       if (t < 1) {
         requestAnimationFrame(step);
         return;
       }
+      angleRef.current = 0;
       setSpinning(false);
       setRemaining((prev) => prev.filter((q) => q.n !== picked.n));
       setModal(picked);
