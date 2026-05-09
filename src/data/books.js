@@ -341,7 +341,121 @@ Baliqchi qush uchib yurib, inlarni birma-bir tomosha qilib chiqquncha, uning tux
           { label: "D", description: "Devorga suvalgan loy inlar" },
           { label: "E", description: "Daraxt teshigi" },
         ],
-        previewImage: '/Picture1.jpg'
+        previewImage: "/Picture1.jpg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    novel_name: "Suvda  xotira  bor",
+    author: '"Bolalar adabiyoti" jurnalidan',
+    genre: "Ilmiy maqola",
+    short_description:
+      "Yapon va rus olimlari tadqiqotlari asosida suvning noyob xususiyatlari haqida qiziqarli ma'lumotlar..",
+    text: `Odamzod suvni hayot avvalida ko'rgan edi, biroq uning xususiyatlari hali ham to'liq anglab yetilgani yo'q. Yapon olimi Massaro Emoto hamda rus professori Konstantin Korotkovning suv xosiyatlari haqidagi tadqiqotlari, fikr-xuloslari sizni ham hayratlantirishi tabiiy.
+Barcha suyuqlik muzlaganda torayadi, suv esa kengayadi. Har qanday modda qattiq holda suyuqligiga qaradanda og'ir bo'ladi, suvda esa buning aksi. Muz uning yuzasida qalqib turadi, fizika qonunlarga ko'ra cho'kib ketmaydi.
+Suvning yana bir antiqa xususiyati — u ikki xil gaz birikmasi (kislorod va vodorod)dan tashkil topgan. Boshqa gazlar o'zaro birlashib, suyuqlik hosil qila olmaydi.
+Suv bir vaqtning o'zida uchta — suyuq, qattiq va gazsimon holatda bo'la oladi. Erta bahorda, tong chog'i hali muzi erib ulgurmagan hovuz yoniga boring, bunga o'zingiz amin bo'lasiz.
+Yana bir nodir xususiyati, suv nimaiki bo'lsa, eslab qoladi. Shveytsariyalik olimlar buni tasdiqlovchi hayratomuz tajriba o'tkazishdi. Ular Jeneva ko'lining qirg'oq suvida bir nechta tuz zarrachalarini eritishdi. So'ng narigi qirg'oqda uskunalar yordamida tekshiruv o'tkazishdi va tuz emas, tuz haqidagi xotira ma'lumotini qayd etishdi. Narigi qirg'oqdagi tuzning o'zini aniqlashga uskunalarning sezuvchanligi yetishmagan bo'lardi.
+Ammo ko'l hovuzidagi ulkan molekula ushbu xotirani qanday bo'lsa, shundayligicha saqlab qolgan.
+Biologlarning aniqlashicha, suv tirik organizmlarni nafaqat sug'oradi, balki ular bo'ylab axborot tashiydi. Aynan suv vositasida tirik jism organlari bir-birining holatidan boxabar bo'lib, qanday funksiyalar zarurligini bilib turishadi. Suv bu axborotlarni qayerdan olishi to'g'risida esa faqat taxmin qilish mumkin.
+Suv hatto musiqani "tinglay" oladi. Ha-ha, Betxoven simfoniyalari yangraganda bir xil kristallar, Motsart musiqasi ostida boshqa xildagilari hosil bo'ladi. Shopen ohanglari Bax organi sadolariga qaraganda mutlaqo boshqacha kristallarni paydo qiladi...
+Suv bizning tuyg'ularimizga javob beradi, ko'plab tajribalarda ayon bo'lishicha, bizdagi ijobiy va salbiy his-tuyg'ular suvning tarkibini o'zgartirib yuboradi, inson sifatiga qarab, go'zal va badburush kristallar hosil bo'ladi.`,
+
+    tasks: [
+      {
+        id: 1,
+        type: "drag_and_drop_qa",
+        title: "1-topshiriq: Yopiq savollar",
+        instruction: "Har bir savolga mos javob kartochkasini torting",
+        pairs: [
+          { question: "Suv muzlaganda qanday o'zgaradi?", answer: "Kengayadi" },
+          { question: "Muz suvda qanday turadi?", answer: "Qalqib turadi" },
+          {
+            question: "Suv qanday gazlardan tashkil topgan?",
+            answer: "Kislorod va vodorod",
+          },
+          {
+            question: "Suv bir vaqtda necha holatda bo'la oladi?",
+            answer: "Uchta",
+          },
+          {
+            question:
+              "Shveytsariyalik olimlar tajribasini qayerda o'tkazishdi?",
+            answer: "Jeneva ko'li",
+          },
+          {
+            question: "Olimlar ko'lning narigi qirg'og'ida nimani aniqladilar?",
+            answer: "Tuz xotirasi",
+          },
+          {
+            question: "Suv tirik organizmlar bo'ylab nima tashiydi?",
+            answer: "Axborot",
+          },
+          {
+            question: "Betxoven musiqasi suvda qanday kristallar hosil qiladi?",
+            answer: "Bir xil",
+          },
+          {
+            question: "Inson tuyg'ulari suvga qanday ta'sir qiladi?",
+            answer: "Tarkibini o'zgartiradi",
+          },
+          { question: "Massaro Emoto qaysi mamlakatdan?", answer: "Yaponiya" },
+          { question: "Konstantin Korotkov kim?", answer: "Rus professori" },
+          {
+            question: "Suvning uchta holati qaysilar?",
+            answer: "Suyuq, qattiq, gazsimon",
+          },
+          {
+            question: "Suv xotirasini qaysi olimlar o'rganishdi?",
+            answer: "Shveytsariyalik olimlar",
+          },
+          {
+            question: "Ijobiy tuyg'ular suvda qanday kristallar hosil qiladi?",
+            answer: "Go'zal",
+          },
+          {
+            question: "Salbiy tuyg'ular suvda qanday kristallar hosil qiladi?",
+            answer: "Badburush",
+          },
+        ],
+      },
+      {
+        id: 2,
+        type: "oral_questions",
+        title: "2-topshiriq: Og'zaki savollar",
+        questions: [
+          "Nima uchun suv tabiatdagi eng noyob moddalardan biri deb aytilgan?",
+          "Matnga ko'ra, suvning boshqa moddalardan farqli jihatlari nimalarda ko'rinadi?",
+          "Suvning 'xotirasi bor' degan fikrdan qanday xulosa chiqarish mumkin?",
+          "Olimlarning tajribalari suv haqida odamlarning fikrini qanday o'zgartiradi?",
+          "Musiqa suvga ta'sir qilishi haqida nima deyish mumkin?",
+          "Nega suv inson hayoti uchun juda muhim deb hisoblanadi?",
+          "Matndan kelib chiqib, insonlar suvga qanday munosabatda bo'lishi kerak?",
+          "Suvning uch holatda bo'lishi tabiat uchun qanday foyda beradi deb o'ylaysiz?",
+          "Matndagi qaysi ma'lumot sizni eng ko'p hayratlantirdi? Nima uchun?",
+          "Suv haqida yana qanday ilmiy sirlar bo'lishi mumkin deb o'ylaysiz?",
+          "Suvning qaysi xususiyati sizni eng ko'p hayratlantirdi? Nima uchun?",
+          "Nega muz suv yuzasida qalqib turadi deb o'ylaysiz?",
+          "Suvning uch xil holatda bo'lishini hayotda qayerlarda ko'rgansiz?",
+          "Olimlar suv haqida qanday qiziqarli tajribalar o'tkazishgan?",
+          "'Suv hamma narsani eslab qoladi' degan fikrni qanday tushundingiz?",
+          "Matnga qarab, suvning inson hayotidagi o'rni haqida nima deya olasiz?",
+          "Nima uchun odamlar suvni asrashi kerak deb o'ylaysiz?",
+          "Suv insonlarga qanday foyda keltiradi?",
+          "Agar suv bo'lmaganida, hayot qanday bo'lar edi deb tasavvur qilasiz?",
+        ],
+      },
+      {
+        id: 3,
+        type: "written_questions",
+        title: "3-topshiriq: Yozma savollar",
+        instruction: "Guruhingiz uchun zarf tanlang",
+        questions: [
+          "Agar suv gapira olganida, odamlarga nima degan bo'lardi? Shu haqida 5–6 gap yozing.",
+          "Suvni asrash haqida rasm chizing va rasmingizni 2–3 gap bilan izohlang.",
+          "Kundalik hayotingizda suvdan qanday foydalanishingiz haqida 5 ta gap yozing.",
+        ],
       },
     ],
   },

@@ -4,6 +4,7 @@ import DragToTable from "./tasks/DragToTable.jsx";
 import OralQuestions from "./tasks/OralQuestions.jsx";
 import OrderingTask from "./tasks/OrderingTask.jsx";
 import ImageMatching from "./tasks/ImageMatching.jsx";
+import WrittenQuestions from "./tasks/WrittenQuestions.jsx";
 
 export default function TaskRenderer({ task, onScore }) {
   const handle = (c, t) => onScore(task.id, c, t);
@@ -43,6 +44,9 @@ export default function TaskRenderer({ task, onScore }) {
           previewImage={task.previewImage}
           onScore={onScore}
         />
+      )}
+      {task.type === "written_questions" && (
+        <WrittenQuestions questions={task.questions} />
       )}
     </section>
   );
