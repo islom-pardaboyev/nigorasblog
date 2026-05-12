@@ -11,3 +11,9 @@ h1, h2, h3, h4 { font-family: "DM Serif Display", serif; letter-spacing: -0.01em
   line-height: 1.9;
   margin-bottom: 1.25rem;
 }
+
+.article-prose span {
+    font-size: 18px;
+  line-height: 1.9;
+margin-bottom: 0rem !important;
+}

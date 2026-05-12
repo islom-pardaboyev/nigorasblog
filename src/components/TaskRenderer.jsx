@@ -5,6 +5,13 @@ import OralQuestions from "./tasks/OralQuestions.jsx";
 import OrderingTask from "./tasks/OrderingTask.jsx";
 import ImageMatching from "./tasks/ImageMatching.jsx";
 import WrittenQuestions from "./tasks/WrittenQuestions.jsx";
+import TrueFalseTask from "./tasks/TrueFalseTask.jsx";
+import FillBlankTask from "./tasks/FillBlankTask.jsx";
+import MultipleChoiceTask from "./tasks/MultipleChoiceTask.jsx";
+import WordScramble from "./tasks/WordScramble.jsx";
+import CategorizeTask from "./tasks/CategorizeTask.jsx";
+import EmojiMatch from "./tasks/EmojiMatch.jsx";
+import QuoteAuthor from "./tasks/QuoteAuthor.jsx";
 
 export default function TaskRenderer({ task, onScore }) {
   const handle = (c, t) => onScore(task.id, c, t);
@@ -42,11 +49,37 @@ export default function TaskRenderer({ task, onScore }) {
           items={task.items}
           images={task.images}
           previewImage={task.previewImage}
-          onScore={onScore}
+          onScore={handle}
         />
       )}
       {task.type === "written_questions" && (
         <WrittenQuestions questions={task.questions} />
+      )}
+      {task.type === "true_false" && (
+        <TrueFalseTask questions={task.questions} onScore={handle} />
+      )}
+      {task.type === 'fill_blank' && (
+        <FillBlankTask questions={task.questions} onScore={handle} />
+      )}
+      {task.type === 'multiple_choice' && (
+        <MultipleChoiceTask questions={task.questions} onScore={handle} />
+      )}
+      {task.type === 'word_scramble' && (
+        <WordScramble words={task.words} onScore={handle} />
+      )}
+      {task.type === 'categorize' && (
+        <CategorizeTask
+          items={task.items}
+          categories={task.categories}
+          correct={task.correct}
+          onScore={handle}
+        />
+      )}
+      {task.type === 'emoji_match' && (
+        <EmojiMatch pairs={task.pairs} onScore={handle} />
+      )}
+      {task.type === 'quote_author' && (
+        <QuoteAuthor quotes={task.quotes} onScore={handle} />
       )}
     </section>
   );
