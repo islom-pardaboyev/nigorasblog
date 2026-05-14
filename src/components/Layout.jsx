@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col relative bg-white">
       <header className="border-b border-gray-200 bg-white/90 backdrop-blur sticky top-0 z-30">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
           <Link to="/" className="block">
@@ -18,8 +18,8 @@ export default function Layout({ children }) {
           </Link>
         </div>
       </header>
-      <main className="flex-1">{children}</main>
-      <footer className="border-t border-gray-200 bg-cream mt-16">
+      <main className="">{children}</main>
+      <footer className="border-t z-20 border-gray-200 bg-cream">
         <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Adabiyot Dunyosi | Tayyorladi: Nigora
         </div>

@@ -1,22 +1,40 @@
 import { Link } from "react-router-dom";
 import { books } from "../data/books.js";
+import videoSrc from "../assets/home-video.mp4";
 
 export default function Home() {
   return (
-    <>
-      <section className="bg-cream border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 text-center">
-          <p className="text-accent font-medium tracking-widest uppercase text-xs mb-4">
+    <section>
+      <header className="relative overflow-hidden py-10 border-b border-gray-200">
+        {/* Background Video */}
+        <video
+          src={videoSrc}
+          muted
+          loop
+          autoPlay
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-24 text-center text-white">
+          <p className="font-medium tracking-widest uppercase text-xs mb-4 text-accent">
             Mutolaa · Topshiriqlar · Tafakkur
           </p>
+
           <h2 className="text-4xl md:text-6xl font-serif max-w-3xl mx-auto leading-tight">
             Har bir hikoya — yangi bir dunyo
           </h2>
-          <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
-            O'qing, o'ylang va interaktiv topshiriqlar orqali o'z bilimingizni sinab ko'ring.
+
+          <p className="mt-6 text-lg max-w-2xl mx-auto text-gray-200">
+            O'qing, o'ylang va interaktiv topshiriqlar orqali o'z bilimingizni
+            sinab ko'ring.
           </p>
         </div>
-      </section>
+      </header>
 
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h3 className="font-serif text-3xl mb-8">Asarlar</h3>
@@ -25,25 +43,41 @@ export default function Home() {
             <Link
               key={b.id}
               to={`/book/${b.id}`}
-              className="group bg-white rounded-2xl p-6 border border-gray-200 shadow-card hover:-translate-y-1 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 shadow-card hover:-translate-y-1 transition-all duration-300"
             >
-              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">
-                {b.genre}
-              </span>
-              <h4 className="font-serif text-2xl mt-4 group-hover:text-primary transition-colors">
-                {b.novel_name}
-              </h4>
-              <p className="text-sm text-gray-500 mt-1">{b.author}</p>
-              <p className="text-gray-700 mt-4 text-[15px] leading-relaxed line-clamp-3">
-                {b.short_description}
-              </p>
-              <span className="inline-flex items-center gap-1 mt-5 text-primary font-medium text-sm">
-                O'qish →
-              </span>
+              {/* Background Image */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `url(${b.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+
+              {/* Dark overlay — textlar ko'rinsin */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+
+              {/* Content */}
+              <div className="relative z-10 p-6">
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider bg-accent text-white px-3 py-1 rounded-full">
+                  {b.genre}
+                </span>
+                <h4 className="font-serif text-2xl mt-4 text-white group-hover:text-white/80 transition-colors">
+                  {b.novel_name}
+                </h4>
+                <p className="text-sm text-white/70 mt-1">{b.author}</p>
+                <p className="text-white/80 mt-4 text-[15px] leading-relaxed line-clamp-3">
+                  {b.short_description}
+                </p>
+                <span className="inline-flex items-center gap-1 mt-5 text-white font-medium text-sm">
+                  O'qish →
+                </span>
+              </div>
             </Link>
           ))}
         </div>
       </section>
-    </>
+    </section>
   );
 }

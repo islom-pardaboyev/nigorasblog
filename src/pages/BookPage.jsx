@@ -41,82 +41,111 @@ export default function BookPage() {
         : "bg-danger text-white";
 
   return (
-    <article className="max-w-3xl mx-auto px-6 py-12">
-      <Link to="/" className="text-sm text-primary hover:text-accent">
-        ← Barcha asarlar
-      </Link>
+    <div className="relative min-h-screen">
 
-      <header className="mt-6 mb-10">
-        <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">
-          {book.genre}
-        </span>
-        <h1 className="font-serif text-4xl md:text-5xl mt-4 leading-tight">
-          {book.novel_name}
-        </h1>
-        <p className="text-gray-500 mt-3 text-lg italic">{book.author}</p>
-      </header>
+      {/* Background rasm */}
+      <img
+        src={book.image}
+        alt=""
+        className="fixed inset-0 w-full h-full object-cover z-0"
+      />
 
-      <div className="article-prose">
-        {book.genre === "She'r" ? (
-          <div className="space-y-6">
-            {book.text
-              .trim()
-              .split(/\n\s*\n/)
-              .map((band, i) => (
-                <div key={i} className="space-y-1">
-                  {band.split("\n").map((misra, j) =>
-                    misra.trim() === "" ? null : (
-                      <span key={j} className="text-lg italic mb-0! block text-gray-700">
-                        {misra.trim()}
-                      </span>
-                    ),
-                  )}
-                </div>
-              ))}
-          </div>
-        ) : (
+      {/* Gradient overlay */}
+      <div className="fixed inset-0 z-10 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
+
+      {/* Content */}
+      <article className="relative z-20">
+
+        {/* Rasm qismi — shaffof */}
+        <div className="max-w-3xl mx-auto px-6 py-12">
+          <Link to="/" className="text-sm text-white/70 hover:text-white">
+            ← Barcha asarlar
+          </Link>
+
+          <header className="mt-6 mb-10">
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent bg-white/20 px-3 py-1 rounded-full">
+              {book.genre}
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl mt-4 leading-tight text-white">
+              {book.novel_name}
+            </h1>
+            <p className="text-white/70 mt-3 text-lg italic">{book.author}</p>
+          </header>
+
           <div className="article-prose">
-            {book.text.split("\n").map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+            {book.genre === "She'r" ? (
+              <div className="space-y-6">
+                {book.text
+                  .trim()
+                  .split(/\n\s*\n/)
+                  .map((band, i) => (
+                    <div key={i} className="space-y-1">
+                      {band.split("\n").map((misra, j) =>
+                        misra.trim() === "" ? null : (
+                          <span
+                            key={j}
+                            className="text-lg italic mb-0! block text-white/90"
+                          >
+                            {misra.trim()}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  ))}
+              </div>
+            ) : (
+              <div className="article-prose">
+                {book.text.split("\n").map((p, i) => (
+                  <div key={i}>
+                    <p className="text-white/90">{p}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-      </div>
-
-      <hr className="my-12 border-gray-200" />
-
-      <div className="mb-8">
-        <p className="text-accent font-semibold uppercase tracking-widest text-xs">
-          Topshiriqlar
-        </p>
-        <h2 className="font-serif text-3xl mt-2">Bilimingizni sinab ko'ring</h2>
-      </div>
-
-      <div className="space-y-8">
-        {book.tasks.map((task) => (
-          <TaskRenderer
-            key={task.id}
-            task={task}
-            onScore={(id, c, t) =>
-              setScores((p) => ({ ...p, [id]: { correct: c, total: t } }))
-            }
-          />
-        ))}
-      </div>
-
-      {allChecked && (
-        <div
-          className={`mt-10 rounded-2xl p-8 text-center shadow-card ${tone}`}
-        >
-          <p className="uppercase tracking-widest text-xs font-semibold opacity-90">
-            Yakuniy natija
-          </p>
-          <p className="font-serif text-5xl mt-3">
-            {totalCorrect}/{totalPossible}
-          </p>
-          <p className="mt-2 text-lg opacity-95">{pct}%</p>
         </div>
-      )}
-    </article>
+
+        <hr className="border-white/20" />
+
+        {/* Topshiriqlar qismi — oq fon */}
+        <div className="bg-white min-h-screen">
+          <div className="max-w-3xl mx-auto px-6 py-12">
+            <div className="mb-8">
+              <p className="text-accent font-semibold uppercase tracking-widest text-xs">
+                Topshiriqlar
+              </p>
+              <h2 className="font-serif text-3xl mt-2">
+                Bilimingizni sinab ko'ring
+              </h2>
+            </div>
+
+            <div className="space-y-8">
+              {book.tasks.map((task) => (
+                <TaskRenderer
+                  key={task.id}
+                  task={task}
+                  onScore={(id, c, t) =>
+                    setScores((p) => ({ ...p, [id]: { correct: c, total: t } }))
+                  }
+                />
+              ))}
+            </div>
+
+            {allChecked && (
+              <div className={`mt-10 rounded-2xl p-8 text-center shadow-card ${tone}`}>
+                <p className="uppercase tracking-widest text-xs font-semibold opacity-90">
+                  Yakuniy natija
+                </p>
+                <p className="font-serif text-5xl mt-3">
+                  {totalCorrect}/{totalPossible}
+                </p>
+                <p className="mt-2 text-lg opacity-95">{pct}%</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+      </article>
+    </div>
   );
 }

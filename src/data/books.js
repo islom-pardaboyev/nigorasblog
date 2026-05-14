@@ -1,9 +1,30 @@
+import Project1 from "../assets/p1.png";
+import Project2 from "../assets/p2.png";
+import Project3 from "../assets/p3.png";
+import Project4 from "../assets/p4.png";
+import Project5 from "../assets/p5.png";
+import Project6 from "../assets/p6.png";
+import Project7 from "../assets/p7.png";
+import Project8 from "../assets/p8.png";
+import Project9 from "../assets/p9.png";
+import Project10 from "../assets/p10.png";
+import Project11 from "../assets/p11.png";
+import Project12 from "../assets/p12.png";
+import Project13 from "../assets/p13.png";
+import Project14 from "../assets/p14.png";
+import Project15 from "../assets/p15.png";
+import Project16 from "../assets/p16.png";
+import Project17 from "../assets/p17.jpeg";
+import Project18 from "../assets/p18.jpeg";
+import Project19 from "../assets/p19.jpeg";
+
 export const books = [
   {
     id: 1,
     novel_name: "Qanday go'zal bu olam",
     author: "Rauf Tolib",
     genre: "She'r",
+    image: Project1,
     short_description: "Tabiat va hayotning go'zalligi haqida ilhomli she'r...",
     text: `Yasharar, yashnar olam,
     Jilo berar o'ziga.
@@ -129,6 +150,7 @@ Qanday go'zal bu olam!`,
     novel_name: "Arining qasosi (I qism)",
     author: "Muhabbat Hamidova",
     genre: "Hikoya",
+    image: Project2,
     short_description:
       "Sardor va O'tkir daladan qaytarkan, ari uyasiga duch kelishadi...",
     text: `Sardor sigirini soyaga olib, o'rtog'i O'tkir bilan daladan qaytarkan atrofi beton g'isht bilan o'ralgan paxta titish sexi yonida to'xtab qoldi.
@@ -339,6 +361,7 @@ O'tkir tutlarning panasiga o'tdi. Uch-to'rtta ari shundoq tepalaridan uchib o'td
     novel_name: "Aring qasosi (II qism)",
     author: "Muhabbat Hamidova",
     genre: "Hikoya",
+    image: Project3,
     short_description:
       "Sardor dalaga bormaydi, O'tkir esa sigir bilan boshiga ko'p mushkul keltiradi...",
     text: `Ertasiga Sardor dalaga bormadi. O'tkir noiloj bir o'zi sigirini yetaklab, yaylovga yo'l oldi. Quyosh endigina tog' ortidan ko'tarilgan, hali o't-o'lanlar yuzida shudring yaltiraydi. O'tkir yuzini chala yuvganigami, uyqusi o'chmagan, yengil shabadada ham eti junjikardi. Kutilmaganda sigiri o'ynoqlab o'zini tutzorga urdi. O'tkir sigirning arqonini qo'yib yubormay, unga qo'shilib yugurdi. Sigir ariq bo'yida to'xtab, qirg'oqdagi maysalarni ochko'zlik bilan yamlashga tushdi. Shu payt O'tkir kalta shimining pochasida nimadir g'imirlaganini sezdi. Bunday qarasa, kattakon qovog'ari! Sho'rlik sovuqdanmi, shudringdanmi karaxt bo'lib qolgan, shekilli, qanotini arang sudrab tepaga o'rmalardi. O'tkir shosha-pisha uni chertib yerga tushirib yubordi.
@@ -510,6 +533,7 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
     novel_name: "Tog'lar qanday paydo bo'lgan?",
     author: "Do'stlar sayohati",
     genre: "Hikoya",
+    image: Project4,
     short_description:
       "Sherzod dadasi bilan tog'ga borib, tog'larning paydo bo'lishi sirini bilib oladi...",
     text: `Bir kuni Sherzod dadasi bilan tog'ga boribdi.
@@ -645,6 +669,7 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
     novel_name: "Qum qayerdan paydo bo'lgan?",
     author: '"Bolalar ensiklopediyasi ertaklarda" kitobidan',
     genre: "Hikoya",
+    image: Project5,
     short_description:
       "Vali dengizda dam olayotib, qumning qayerdan paydo bo'lganini bilib oladi...",
     text: `Yozda Valining dadasi uni dengizga olib boribdi. Salqin shabada, ajoyib to'lqinlar, issiqqina qum, bundan ortiq yana nima kerak?
@@ -768,6 +793,7 @@ U yerda Vali qumdan minoralar yasabdi, ko'llar qazibdi, issiqqina qumda yumalabd
     novel_name: "Chaqmoq",
     author: "Otash Xolmirzayev",
     genre: "She'r",
+    image: Project6,
     short_description:
       "Chaqmoq va yomg'ir tabiatning kuchli manzarasini tasvirlaydi...",
     text: `Chaqmoq chaqib olamni,
@@ -876,6 +902,7 @@ Yetti rangda kuladi.`,
     novel_name: "Mimoza",
     author: "Quddus Muhammadiy",
     genre: "She'r",
+    image: Project7,
     short_description:
       "Uyatchan va foydali mimoza o'simligining ajoyib xususiyatlari haqida she'r...",
     text: `Bir o't ko'rdim uyatchan,
@@ -992,6 +1019,7 @@ Tabiati — nur, toza.`,
     novel_name: "Qushlar qanday inlarda yashaydilar?",
     author: '"Bolalar ensiklopediyasi ertaklarda" kitobidan',
     genre: "Ertak",
+    image: Project8,
     short_description:
       "Baliqchi qush boshqa qushlarning inlarini ko'rib, o'ziga mos in qidiradi...",
     text: `Qadim zamonda bir baliqchi qush bo'lgan ekan. Uning tuxum qo'yib, bolalaydigan payti yaqinlashibdi. Baliqchi qush: "Qanday in qursam ekan?" deb o'ylanib qolibdi. O'ylab-o'ylab, oldin boshqa qushlarning qanday in qurishlarini bilib olishga qaror qilibdi.
@@ -1126,6 +1154,7 @@ Baliqchi qush uchib yurib, inlarni birma-bir tomosha qilib chiqquncha, uning tux
     novel_name: "Suvda  xotira  bor",
     author: '"Bolalar adabiyoti" jurnalidan',
     genre: "Ilmiy maqola",
+    image: Project9,
     short_description:
       "Yapon va rus olimlari tadqiqotlari asosida suvning noyob xususiyatlari haqida qiziqarli ma'lumotlar..",
     text: `Odamzod suvni hayot avvalida ko'rgan edi, biroq uning xususiyatlari hali ham to'liq anglab yetilgani yo'q. Yapon olimi Massaro Emoto hamda rus professori Konstantin Korotkovning suv xosiyatlari haqidagi tadqiqotlari, fikr-xuloslari sizni ham hayratlantirishi tabiiy.
@@ -1240,6 +1269,7 @@ Suv bizning tuyg'ularimizga javob beradi, ko'plab tajribalarda ayon bo'lishicha,
     novel_name: "Mikrob, virus va Salomat qiz haqida ertak (I qism)",
     author: "Kavsar Turdiyeva",
     genre: "She'r",
+    image: Project10,
     short_description:
       "Salomat ismli qiz kichik odamlarning iltimosi bilan Mikrob va Virusga qarshi kurashga otlanadi...",
     text: `Bor ekan-u, yo'q ekan,
@@ -1406,6 +1436,7 @@ Qizcha shuni o'yladi.`,
     novel_name: "Mikrob, virus va Salomat qiz haqida ertak (II qism)",
     author: "Kavsar Turdiyeva",
     genre: "She'r",
+    image: Project11,
     short_description:
       "Salomat Mikrob va Virusga qarshi kurashib, bemorlarni sog'aytiradi...",
     text: `Yo'qotmasdan o'zini
@@ -1594,12 +1625,12 @@ Keltirdi bizga quvonch".`,
       },
     ],
   },
-
   {
     id: 12,
     novel_name: "Chuchvarachi chumchuq xola",
     author: "Muazzam Ibrohimova",
     genre: "She'r",
+    image: Project12,
     short_description:
       "Mehnatsevar chumchuq xola bahor kelib o'z ishini boshlaydi va shifobaxsh chuchvara tayyorlaydi...",
     text: `Bahor kelib chor atroflar
@@ -1781,6 +1812,7 @@ Chuchvarachi xolamiz!`,
     novel_name: "Qari bilganni pari bilmas",
     author: "O'zbek xalq ertagi",
     genre: "Ertak",
+    image: Project13,
     short_description:
       "Zolim podshoh keksalarni shahardan haydar, lekin bir yigit otasini yashirib, oxirida haqiqat g'alaba qiladi...",
     text: `Qadim zamonda, Sharq tomonda aytgani aytgan, degani degan zolim podshoh o'tgan ekan. U boylik, mol-u dunyo uchun hech narsadan tap tortmas ekan. Uning boyligi hech yerga sig'mas, biroq podshoh uni sarflash o'rniga to'plagani to'plagan ekan.
@@ -1923,6 +1955,7 @@ Shu ahvolda kunlar, oylar, yillar o'ta boshlabdi...`,
     novel_name: "Nok",
     author: "Latif Mahmudov",
     genre: "Hikoya",
+    image: Project14,
     short_description:
       "Buvisi bilan ko'chib ketgan o'g'il bola eski mahallaga boradi va nok daraxtining sir-asrorini bilib oladi...",
     text: `Bu yerga kelganimizga uch-to'rt oy bo'ldi. Men ham, oyim ham, dadam ham yangi uyga, qo'ni-qo'shnilarga allaqachon o'rganib ketdik. Buvim esa xuddi biror narsasini yo'qotgandek xayol surib qolar, turib-turib eski hovlini qo'msab qoladi:
@@ -2085,6 +2118,7 @@ Azim tup nok esa jaziramadan odamlarni bag'riga chorlab, go'yo buvimning gaplari
     novel_name: "Temir qoziq",
     author: "O'tkir Hoshimov",
     genre: "Hikoya",
+    image: Project15,
     short_description:
       "Bir yigitcha jiydazorda temir qoziq topib oladi, lekin bu topilma uni qiyin ahvolga soladi...",
     text: `Tengqur bolalar bilan jiydazorda mol boqardik. Adashmasam, o'shanda beshinchi sinfda o'qirdim. Jiydazorda o't ko'p. Bekinmachoq o'ynashga ham qulay joy. Faqat kun botar-botmas, har kim o'z molini yetaklab, uyiga jo'nar, jiydazorda ajina bor, yolg'iz yursang, og'zingni qiyshaytirib ketadi, degan vahima gaplar yurardi.
@@ -2257,6 +2291,7 @@ Labimga uchuq toshib, bir-ikki kun achishib yurganini hisobga olmaganda, hech ni
     novel_name: "Ukam",
     author: "Hamza Imomberdiyev",
     genre: "She'r",
+    image: Project16,
     short_description:
       "Ukasining kasalligidan xabar topgan aka o'zining barcha xato va g'ururiga tavba qiladi...",
     text: `Boya kelib "Tez yordam"
@@ -2412,6 +2447,7 @@ Tezroq uyga qaytsang bas.`,
     novel_name: "Tarbiya",
     author: "Habibullo Qodiriy",
     genre: "Hikoya",
+    image: Project17,
     short_description:
       "Buyuk yozuvchi Abdulla Qodiriy o'z farzandini qanday tarbiyalagan? O'g'li Habibullo eslaydi...",
     text: `Dadam — Abdulla Qodiriy bizni xoh oilada, xoh tashqarida bo'lsin, zimdan kuzatib turar edilar, lekin sira quruq nasihatgo'ylik qilmas, yo'rig'i bilan ikki og'iz ma'noli gap aytar, shuning o'zi bizga "ham oshlik", "ham nonlik" bo'lar edi...
@@ -2541,6 +2577,7 @@ U kishi kiyim-kechak vajidan ham bizni ortiqcha siylamas, el-yurt qatori kiyinti
     novel_name: "Ona (Alisherning onasi)",
     author: "She'r (Alisher Navoiyning onasi — Ma'suma begimga)",
     genre: "She'r",
+    image: Project18,
     short_description:
       "Ona — eng ulug' zot. She'r Alisher Navoiyning onasi Ma'suma begimga bag'ishlangan...",
     text: `Ona — eng ulug' zot,
@@ -2713,6 +2750,7 @@ Har dilda bugun.`,
     novel_name: "Ona kaklik",
     author: "Azim Suyun",
     genre: "Hikoya",
+    image: Project19,
     short_description:
       "Bir cho'pon bola ona kaklikning tuxumlarini olmoqchi bo'ladi, lekin ona qush uni aqli bilan chalg'itib, bolalarini asrab qoladi...",
     text: `Hayot — murakkab. Unda umr kechirish o'z-o'zidan bo'lmaydi. Ammo qiyinchilik, og'irchilikdan, xatarlardan qo'rqavermaslik kerak. Inson aql, tafakkur chirog'i har qanday zulmatni yoritishga qodir, yo'lingizdagi ko'ringan-ko'rinmagan to'siqlarni, g'ovlarni surib tashlashda sobit. Insonni qo'yib turaylik, tabiatdagi har bir jonzot ham tiriklik uchun kurashib yashaydi.
