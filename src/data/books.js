@@ -15,7 +15,7 @@ import Project14 from "../assets/p14.png";
 import Project15 from "../assets/p15.png";
 import Project16 from "../assets/p16.png";
 import Project17 from "../assets/p17.png";
-import Project18 from "../assets/p18.jpeg";
+import Project18 from "../assets/p18.png";
 import Project19 from "../assets/p19.jpeg";
 
 export const books = [
