@@ -14,7 +14,7 @@ import Project13 from "../assets/p13.png";
 import Project14 from "../assets/p14.png";
 import Project15 from "../assets/p15.png";
 import Project16 from "../assets/p16.png";
-import Project17 from "../assets/p17.jpeg";
+import Project17 from "../assets/p17.png";
 import Project18 from "../assets/p18.jpeg";
 import Project19 from "../assets/p19.jpeg";
 
@@ -78,8 +78,6 @@ Qanday go'zal bu olam!`,
           "Tayanchi",
           "Ta'zim etar",
           "Bosh egadi",
-          "Ufqlar",
-          "Ufq chegaralar",
         ],
         correct: {
           "She'rdagi so'z": [
@@ -90,7 +88,6 @@ Qanday go'zal bu olam!`,
             "Oshiq",
             "Ustuni",
             "Ta'zim etar",
-            "Ufqlar",
           ],
           Sinonim: [
             "Yashnar",
@@ -100,7 +97,6 @@ Qanday go'zal bu olam!`,
             "Intiluvchi",
             "Tayanchi",
             "Bosh egadi",
-            "Ufq chegaralar",
           ],
         },
       },
@@ -111,11 +107,11 @@ Qanday go'zal bu olam!`,
         instruction: "She'r bandlarini to'g'ri ketma-ketlikda joylashtiring",
         correct_order: [
           "Yasharar, yashnar olam, Jilo berar o'ziga...",
-          "Hadya etadi bog'lar, Menga bir olam qo'shiq...",
+          "Hattoki maysalar ham, Boshqachadir ko'zimga...",
           "Urilib toshdan toshga, Oqadi tog' suvlari...",
           "Chorlaydi quchog'iga, Jilva qilib bu hayot...",
-          "Bildim, intilish, izlash — Hayotimning mazmuni...",
-          "Ufqlar ochar quchoq, Ta'zim etar tog'lar ham...",
+          `Yuguraman, chopaman,
+Orzudan bog'lab qanot`,
         ],
       },
       {
@@ -136,7 +132,6 @@ Qanday go'zal bu olam!`,
         questions: [
           "She'r sizda qanday his-tuyg'ularni uyg'otdi?",
           "Shoir she'rni qanday kayfiyatda yozgan deb o'ylaysiz?",
-          "She'rdagi 'Shamol meni quchoqlar' misrasida qanday san'at qo'llangan?",
           "Sizningcha, 'Orzudan bog'lab qanot' misrasi nima ma'noni anglatadi?",
           "'Do'stlarim — hamroh, safdosh, Yuragimning ustuni' misralarini hayotingiz bilan bog'lang.",
           "She'rda tabiat va inson o'rtasidagi munosabat qanday tasvirlangan?",
@@ -380,51 +375,47 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
         instruction: "Hikoyadan olingan so'zni uning sinonimiga torting",
         columns: ["Hikoyadan", "Sinonimi"],
         items: [
-          "Yugurdi",
-          "Chopdi",
-          "Dedi",
-          "Aytdi",
-          "Qaradi",
-          "Boqdi",
-          "Ketdi",
-          "Jo'nadi",
-          "Tushdi",
-          "Yiqildi",
           "Chiqdi",
-          "Ko'rindi",
+          "Boqdi",
+          "Mahkam tutdi",
+          "Dedi",
+          "Qaradi",
+          "Jo'nadi",
+          "So'zladi",
           "Bordi",
           "Yo'l oldi",
-          "Ushlab turdi",
-          "Mahkam tutdi",
+          "Ko'rindi",
           "Qo'rqdi",
+          "Yiqildi",
+          "Ketdi",
+          "Ushlab turdi",
+          "Chopdi",
           "Sarosimaga tushdi",
-          "Aytdi",
-          "So'zladi",
+          "Tushdi",
+          "Yugurdi",
         ],
         correct: {
           Hikoyadan: [
-            "Yugurdi",
-            "Dedi",
-            "Qaradi",
-            "Ketdi",
-            "Tushdi",
-            "Chiqdi",
-            "Bordi",
-            "Ushlab turdi",
-            "Qo'rqdi",
-            "Aytdi",
+            "Yugurdi", // Ran
+            "Dedi", // Said
+            "Qaradi", // Looked
+            "Ketdi", // Left/Went
+            "Tushdi", // Fell (as in 'tayoq tushirdi' or fell down)
+            "Chiqdi", // Went out/Appeared
+            "Bordi", // Went to
+            "Ushlab turdi", // Held
+            "Qo'rqdi", // Was afraid
           ],
           Sinonimi: [
-            "Chopdi",
-            "Aytdi",
-            "Boqdi",
-            "Jo'nadi",
-            "Yiqildi",
-            "Ko'rindi",
-            "Yo'l oldi",
-            "Mahkam tutdi",
-            "Sarosimaga tushdi",
-            "So'zladi",
+            "Chopdi", // Ran (Synonym)
+            "So'zladi", // Spoke (Synonym)
+            "Boqdi", // Looked/Glanced (Synonym)
+            "Jo'nadi", // Set off (Synonym)
+            "Yiqildi", // Fell down (Synonym)
+            "Ko'rindi", // Appeared (Synonym)
+            "Yo'l oldi", // Headed towards (Synonym)
+            "Mahkam tutdi", // Held tightly (Synonym)
+            "Sarosimaga tushdi", // Panicked (Synonym)
           ],
         },
       },
@@ -435,26 +426,26 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
         instruction: "So'zni uning antonimiga torting",
         columns: ["So'z", "Antonim"],
         items: [
-          "Keldi",
+          "Yopiq",
+          "Kasal",
+          "Tez",
+          "Yaxshi",
+          "Yorug'",
+          "Past",
+          "Yengil",
           "Ketdi",
           "Qattiq",
-          "Yumshoq",
-          "Tez",
-          "Sekin",
-          "Baland",
-          "Past",
-          "Sog'",
-          "Kasal",
-          "Ochiq",
-          "Yopiq",
-          "Katta",
           "Kichik",
-          "Yorug'",
+          "Ochiq",
+          "Baland",
+          "Sog'",
+          "Yumshoq",
           "Qorong'u",
-          "Yaxshi",
-          "Yomon",
           "Og'ir",
-          "Yengil",
+          "Sekin",
+          "Keldi",
+          "Katta",
+          "Yomon",
         ],
         correct: {
           "So'z": [
@@ -492,6 +483,7 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
           "Sardor dalaga bormadi, O'tkir sigirni yaylovga yetaklab ketdi",
           "O'tkir sigir ustiga o'tirdi, sigir uni tulporga o'xshatib otdi",
           "Sigir ariq bo'yida to'xtab, o'tlab ketdi",
+          "Sigir ariq bo'yida to'xtab, o'tlab ketdi",
           "O'tkir arqon bilan sigirni bog'lamoqchi bo'ldi",
           "Arqon uzilib, O'tkir yerga yiqildi",
           "O'tkir kasal bo'lib, shifoxonaga tushdi",
@@ -521,6 +513,7 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
           "Nima uchun hikoya 'Aring qasosi' deb nomlangan?",
           "Zamira buvi qanday voqeani Sardorga so'zlab bergan bo'lishi mumkin?",
           "O'tkir qilgan ishidan qanday xulosa chiqardi?",
+          "O'tkirning bu ahvolga tushishiga nima sabab bo;ldi?",
           "Sizningcha, bunday holat yuz bermasligi uchun nima kerak edi?",
           "'Axir, ular ham tabiatning bolasi' degan fikrni izohlang.",
           "O'tkirning xulq-atvori hikoya davomida qanday o'zgardi?",
@@ -658,7 +651,6 @@ O'tkir bir hafta shifoxonada yotdi. Uyga qaytgach, Sardor uni ko'rgani chiqdi.
           "Vulqon nima va u qanday ishlaydi?",
           "Yer qatlamining siljishi degani nima?",
           "Sherzod dadasi bilan tog'ga borganda nimani bilib oldi?",
-          "Sizningcha, tog'larni o'rganish nima uchun muhim?",
           "Agar siz Sherzodning o'rnida bo'lsangiz, yana qanday savol bergan bo'lardingiz?",
         ],
       },
@@ -2065,25 +2057,29 @@ Azim tup nok esa jaziramadan odamlarni bag'riga chorlab, go'yo buvimning gaplari
         instruction: "Aralashtirilgan harflarni to'g'ri tartibga keltiring",
         words: [
           {
-            scrambled: "KONLAR",
-            answer: "NOLKAR",
-            hint: "Baland bino qurish uchun ishlatiladigan mashina — kran",
+            scrambled: "NALKRAR",
+            answer: "KRANLAR",
+            hint: "Baland bino qurish uchun ishlatiladigan mashinalar",
           },
-          { scrambled: "IVUMB", answer: "BUVIM", hint: "Boboning xotini" },
           {
-            scrambled: "LUDUYZ",
+            scrambled: "VIBUM",
+            answer: "BUVIM",
+            hint: "Dada yoki oyining onasi",
+          },
+          {
+            scrambled: "ZULDUY",
             answer: "YULDUZ",
             hint: "Kechasi osmonda ko'rinadigan yorug' nuqtalar",
           },
           {
-            scrambled: "MOZAJA",
-            answer: "JAZOMA",
-            hint: "Yoz issig'i — jazirama",
+            scrambled: "AMARIZAJ",
+            answer: "JAZIRAMA",
+            hint: "Yozning juda issiq payti",
           },
           {
-            scrambled: "TUGURB",
+            scrambled: "TURGUB",
             answer: "BURGUT",
-            hint: "Kuchli va ulkan qush",
+            hint: "Kuchli va ulkan yirtqich qush",
           },
         ],
       },
@@ -2331,22 +2327,6 @@ Tezroq uyga qaytsang bas.`,
     tasks: [
       {
         id: 1,
-        type: "emoji_match",
-        title: "1-topshiriq: Emoji va so'zni moslashtiring",
-        instruction: "Har bir emojini mos so'zga torting",
-        pairs: [
-          { emoji: "🚑", word: "Tez yordam" },
-          { emoji: "😢", word: "Yig'i" },
-          { emoji: "🧸", word: "O'yinchoq" },
-          { emoji: "🎻", word: "Rubob" },
-          { emoji: "❤️", word: "Sevgi" },
-          { emoji: "🏥", word: "Shifoxona" },
-          { emoji: "👦", word: "Uka" },
-          { emoji: "🙏", word: "Iltimos" },
-        ],
-      },
-      {
-        id: 2,
         type: "fill_blank",
         title: "2-topshiriq: Bo'sh joyni to'ldiring",
         instruction: "She'rdan olingan misralarni to'ldiring",
@@ -2379,7 +2359,7 @@ Tezroq uyga qaytsang bas.`,
         ],
       },
       {
-        id: 3,
+        id: 2,
         type: "quote_author",
         title: "3-topshiriq: Qaysi asardan?",
         instruction: "Quyidagi misralar qaysi asardan olinganini toping",
@@ -2417,7 +2397,7 @@ Tezroq uyga qaytsang bas.`,
         ],
       },
       {
-        id: 4,
+        id: 3,
         type: "oral_questions",
         title: "4-topshiriq: Og'zaki savollar",
         questions: [
@@ -2430,7 +2410,7 @@ Tezroq uyga qaytsang bas.`,
         ],
       },
       {
-        id: 5,
+        id: 4,
         type: "written_questions",
         title: "5-topshiriq: Yozma topshiriq",
         instruction: "Guruhingiz uchun zarf tanlang",
@@ -2470,7 +2450,11 @@ U kishi kiyim-kechak vajidan ham bizni ortiqcha siylamas, el-yurt qatori kiyinti
 — Nega, bolam?
 — Ayting-chi oyi, yon-verimizda kimning bolasi velosiped minayotir?
 — Birov bilan nima ishing bor?
-— Tushunmaysiz... Ko'pchilik bilan barobar borish kerak. Habibulla velosiped minsa, boshqa bolalarning ko'ngli o'ksiydi, qo'shnilar uyida janjal bo'ladi, ular siz-mendan ranjiydilar.`,
+— Tushunmaysiz... Ko'pchilik bilan barobar borish kerak. Habibulla velosiped minsa, boshqa bolalarning ko'ngli o'ksiydi, qo'shnilar uyida janjal bo'ladi, ular siz-mendan ranjiydilar.
+
+U kishi bizni kino, teatr, sayil-tomoshalarga ham hisobli yuborar va albatta, kimlar bilan ketayotganimizни, ularning qanday shaxsligini aniqlar edilar...
+
+Men xotira yozayotirman. Ehtimol, dadamning bu xil oila tarbiyasi borasidagi aqidalari hozirgi kunimizga xiyol yopishib tushmas. Men u vaqtlarda dadamning biz bolalarga nisbatan bunchalik qattiqqo'l bo'lishlaridan, ehtimol, xafa bo'lgandirman ham. Biroq hozir u kishining islatariga faqat rahmat aytaman.`,
     tasks: [
       {
         id: 1,

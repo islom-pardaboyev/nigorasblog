@@ -30,7 +30,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-6 text-lg max-w-2xl mx-auto text-gray-200">
-            O'qing, o'ylang va interaktiv topshiriqlar orqali o'z bilimingizni
+            O'qing, o'ylang va interfaol topshiriqlar orqali o'z bilimingizni
             sinab ko'ring.
           </p>
         </div>
