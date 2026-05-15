@@ -25,14 +25,14 @@ export default function Layout({ children }) {
       <footer className="border-t border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-12">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0 mb-8">
             {/* Left: Project Info */}
             <div>
               <h3 className="font-serif text-xl text-gray-900 mb-2">
                 Adabiyot Dunyosi
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                4-sinf III qism “O’qish savodxonligi” darsligi asosidan
+                4-sinf III qism “O’qish savodxonligi” darsligi asosida
               </p>
             </div>
 
