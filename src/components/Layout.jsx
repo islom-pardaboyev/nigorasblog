@@ -42,11 +42,12 @@ export default function Layout({ children }) {
                 Tayyorladi
               </h4>
               <div className="space-y-1 text-sm text-gray-700">
-                <b >
-                  Ravshanova (Yuldasheva) Nigora Sultanovna
-                </b>
-                
-                <p className="text-gray-600">Ta’lim va tarbiya nazariyasi va metodikasi (boshlang’ich ta’lim) magistranti</p>
+                <b>Ravshanova (Yuldasheva) Nigora Sultanovna</b>
+
+                <p className="text-gray-600">
+                  Ta’lim va tarbiya nazariyasi va metodikasi (boshlang’ich
+                  ta’lim) magistranti
+                </p>
               </div>
             </div>
 
@@ -80,23 +81,11 @@ export default function Layout({ children }) {
           <hr className="border-gray-200 my-8" />
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-            <p>
-              © {new Date().getFullYear()} Adabiyot Dunyosi. Barcha huquqlar
-              himoyalangan.
-            </p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Maxfiylik siyosati
-              </a>
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Foydalanish shartlari
-              </a>
-              <a href="#" className="hover:text-gray-700 transition-colors">
-                Bog'lanish
-              </a>
-            </div>
-          </div>
+
+          <p className="text-center text-xs text-gray-500">
+            © {new Date().getFullYear()} Adabiyot Dunyosi. Barcha huquqlar
+            himoyalangan.
+          </p>
         </div>
       </footer>
     </div>
