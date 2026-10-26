@@ -2,91 +2,81 @@ import { Link } from "react-router-dom";
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col relative bg-white">
-      <header className="border-b border-gray-200 bg-white/90 backdrop-blur sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="block">
-            <h1 className="text-3xl md:text-4xl font-serif text-primary leading-none">
-              Adabiyot Dunyosi
-            </h1>
-            <p className="text-xs md:text-sm text-gray-500 mt-1 italic">
-              Nigora tomonidan tayyorlangan
-            </p>
-          </Link>
+    <div className="min-h-screen flex flex-col room">
+      <header className="max-w-6xl w-full mx-auto px-6 py-6 flex items-center justify-between gap-6">
+        <Link
+          to="/"
+          className="block border border-brass text-center px-5 pt-2.5 pb-2 bg-brass/10 hover:bg-brass/20 transition-colors"
+        >
+          <span className="block font-serif text-lg md:text-[22px] leading-none tracking-[0.14em] uppercase text-brass">
+            Adabiyot Dunyosi
+          </span>
+          <span className="block italic text-xs text-muted mt-1.5">
+            Nigora tomonidan tayyorlangan
+          </span>
+        </Link>
+        <nav>
           <Link
             to="/"
-            className="text-sm font-medium text-primary hover:text-accent transition-colors"
+            className="italic text-[15px] text-muted hover:text-brass transition-colors"
           >
             Asosiy
           </Link>
-        </div>
+        </nav>
       </header>
-      <main className="">{children}</main>
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          {/* Main Footer Content */}
-          <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0 mb-8">
-            {/* Left: Project Info */}
-            <div>
-              <h3 className="font-serif text-xl text-gray-900 mb-2">
-                Adabiyot Dunyosi
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                4-sinf III qism “O’qish savodxonligi” darsligi asosida
-              </p>
-            </div>
 
-            {/* Center: Creator Info */}
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">
-                Tayyorladi
-              </h4>
-              <div className="space-y-1 text-sm text-gray-700">
-                <b>Ravshanova (Yuldasheva) Nigora Sultanovna</b>
+      <main className="flex-1">{children}</main>
 
-                <p className="text-gray-600">
-                  Ta’lim va tarbiya nazariyasi va metodikasi (boshlang’ich
-                  ta’lim) magistranti
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Contact Info */}
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">
-                Aloqa
-              </h4>
-              <div className="space-y-2">
-                <a
-                  href="tel:+998933292602"
-                  className="flex items-center text-sm text-primary hover:text-accent transition-colors"
-                >
-                  <span className="mr-2">📱</span>
-                  +998 93 329 26 02
-                </a>
-                <a
-                  href="https://t.me/NigoraSultanovna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-sm text-primary hover:text-accent transition-colors"
-                >
-                  <span className="mr-2">@</span>
-                  @NigoraSultanovna
-                </a>
-              </div>
-            </div>
+      <footer className="border-t border-brassd mt-24">
+        <div className="max-w-6xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-3">
+          <div>
+            <h3 className="font-serif text-2xl text-paper mb-2">
+              Adabiyot Dunyosi
+            </h3>
+            <p className="text-sm text-muted leading-relaxed">
+              4-sinf III qism “O’qish savodxonligi” darsligi asosida
+            </p>
           </div>
 
-          {/* Divider */}
-          <hr className="border-gray-200 my-8" />
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.18em] text-brass mb-3">
+              Tayyorladi
+            </h4>
+            <p className="text-paper font-bold text-sm">
+              Ravshanova (Yuldasheva) Nigora Sultanovna
+            </p>
+            <p className="text-sm text-muted mt-1 leading-relaxed">
+              Ta’lim va tarbiya nazariyasi va metodikasi (boshlang’ich ta’lim)
+              magistranti
+            </p>
+          </div>
 
-          {/* Bottom Section */}
-
-          <p className="text-center text-xs text-gray-500">
-            © {new Date().getFullYear()} Adabiyot Dunyosi. Barcha huquqlar
-            himoyalangan.
-          </p>
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.18em] text-brass mb-3">
+              Aloqa
+            </h4>
+            <div className="space-y-2 text-sm">
+              <a
+                href="tel:+998933292602"
+                className="block text-paper hover:text-brass transition-colors"
+              >
+                +998 93 329 26 02
+              </a>
+              <a
+                href="https://t.me/NigoraSultanovna"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-paper hover:text-brass transition-colors"
+              >
+                @NigoraSultanovna
+              </a>
+            </div>
+          </div>
         </div>
+        <p className="text-center text-xs text-muted pb-10 italic">
+          © {new Date().getFullYear()} Adabiyot Dunyosi. Barcha huquqlar
+          himoyalangan.
+        </p>
       </footer>
     </div>
   );

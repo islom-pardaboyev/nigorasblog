@@ -16,12 +16,13 @@ import QuoteAuthor from "./tasks/QuoteAuthor.jsx";
 export default function TaskRenderer({ task, onScore }) {
   const handle = (c, t) => onScore(task.id, c, t);
   return (
-    <section className="bg-white rounded-2xl border border-gray-200 shadow-card p-6 md:p-8">
-      <h3 className="font-serif text-2xl md:text-3xl text-primary">
+    <section className="ticket p-7 md:p-10">
+      <div className="relative z-10">
+      <h3 className="font-serif text-2xl md:text-3xl text-primary leading-tight">
         {task.title}
       </h3>
       {task.instruction && (
-        <p className="text-gray-500 mt-2 mb-6">{task.instruction}</p>
+        <p className="italic text-gray-500 mt-2 mb-6">{task.instruction}</p>
       )}
       {!task.instruction && <div className="mt-4" />}
       {task.type === "drag_and_drop_qa" && (
@@ -81,6 +82,7 @@ export default function TaskRenderer({ task, onScore }) {
       {task.type === 'quote_author' && (
         <QuoteAuthor quotes={task.quotes} onScore={handle} />
       )}
+      </div>
     </section>
   );
 }

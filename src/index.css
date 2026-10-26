@@ -2,18 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { background: #ffffff; color: #1a1a1a; }
-body { font-family: "DM Sans", system-ui, sans-serif; }
-h1, h2, h3, h4 { font-family: "DM Serif Display", serif; letter-spacing: -0.01em; }
-
-.article-prose p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 1.25rem;
+:root {
+  --wall: #3b1119;
+  --wall-2: #2c0c12;
+  --brass: #cfa85d;
+  --paper: #f2e8d2;
 }
 
-.article-prose span {
-    font-size: 18px;
-  line-height: 1.9;
-margin-bottom: 0rem !important;
+html {
+  background: var(--wall-2);
+  scrollbar-color: #7a5a35 var(--wall-2);
+}
+body {
+  font-family: "Libre Caslon Text", Georgia, serif;
+  color: var(--paper);
+  background: var(--wall-2);
+}
+h1, h2, h3, h4 {
+  font-family: "Libre Caslon Display", Georgia, serif;
+  font-weight: 400;
+}
+::selection { background: var(--brass); color: var(--wall-2); }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.ticket :focus-visible { outline-color: #6a1a24; }
+
+.room {
+  background: radial-gradient(120% 60% at 50% 0%, #4b1822, var(--wall) 45%, var(--wall-2));
+}
+
+/* Shelf */
+.row {
+  --k: 1;
+  display: flex;
+  justify-content: safe center;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 0 26px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  min-height: calc(330px * var(--k));
+  padding-top: 40px;
+}
+@media (min-width: 768px) { .row { --k: 1.25; } }
+@media (min-width: 1100px) { .row { --k: 1.5; } }
+.row::-webkit-scrollbar { display: none; }
+.ledge {
+  height: 22px;
+  background: linear-gradient(180deg, #4a2818, #331a10 40%, #1b0d08);
+  box-shadow: 0 14px 26px -10px #000;
+  border-top: 1px solid #6b4126;
+  margin-bottom: 6px;
+}
+.spine {
+  flex: 0 0 auto;
+  width: calc(var(--w) * var(--k) * 1px);
+  height: calc(var(--h) * var(--k) * 1px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px 3px 0 0;
+  font: 400 calc(15.5px * (1 + (var(--k) - 1) * 0.5)) "Libre Caslon Display", serif;
+  letter-spacing: 0.05em;
+  box-shadow: inset 3px 0 0 rgba(255, 255, 255, 0.08), inset -4px 0 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s;
+}
+.spine span {
+  writing-mode: vertical-rl;
+  display: block;
+  max-height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.spine::before,
+.spine::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: currentColor;
+  opacity: 0.65;
+}
+.spine::before { top: 12px; }
+.spine::after { bottom: 12px; }
+.spine:hover { transform: translateY(-16px); }
+.spine[aria-pressed="true"] { transform: translateY(-30px); filter: brightness(1.18); }
+
+/* Library ticket: every task sits on one */
+.ticket {
+  position: relative;
+  background: #f2e8d2;
+  color: #2a1a14;
+  box-shadow: 0 26px 46px -24px rgba(0, 0, 0, 0.75);
+}
+.ticket::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px dashed #a88d63;
+  pointer-events: none;
+}
+
+/* The printed page */
+.article-prose p,
+.article-prose .misra {
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0 0 1.15rem;
+  color: #2a1a14;
+}
+.article-prose .misra { display: block; margin-bottom: 0.1rem; font-style: italic; }
+.article-prose > div > p:first-child::first-letter {
+  font: 400 4.2rem/0.8 "Libre Caslon Display", serif;
+  color: #6a1a24;
+  float: left;
+  padding: 0.4rem 0.7rem 0 0;
+  font-style: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
